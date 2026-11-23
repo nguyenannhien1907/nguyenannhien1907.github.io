@@ -5,41 +5,99 @@
 	<title>Nguyen An Nhien</title>
 	
 	<link rel="stylesheet" href="style.css" />
+	<style>
+		/* Layout additions for profile photo and project images */
+		.header-wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 20px;
+			flex-wrap: wrap;
+		}
+		.profile-photo-placeholder {
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			border: 2px dashed #999;
+			background-color: #f4f6f8;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			font-size: 12px;
+			color: #666;
+			overflow: hidden;
+			flex-shrink: 0;
+		}
+		.profile-photo-placeholder img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.project-showcase {
+			display: flex;
+			gap: 20px;
+			align-items: flex-start;
+			margin-top: 10px;
+			flex-wrap: wrap;
+		}
+		.project-text {
+			flex: 1;
+			min-width: 260px;
+		}
+		.project-media {
+			flex: 1;
+			min-width: 280px;
+			max-width: 460px;
+		}
+		.project-media img {
+			width: 100%;
+			height: auto;
+			border-radius: 6px;
+			border: 1px solid #ddd;
+			box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+			display: block;
+		}
+	</style>
 </head>
 <body>
 	<div class="container">
-	<header>
-		<h1 id="name">Nguyen An Nhien</h1>
-		
-		<div id="designation">
-		
-			<span class="title">Student,</span>
-			<span class="organization">Vinschool Central Park</span>
-		
+	<header class="header-wrapper">
+		<div class="header-info">
+			<h1 id="name">Nguyen An Nhien</h1>
+
+			<div id="designation">
+				<span class="title">Student,</span>
+				<span class="organization">Vinschool Central Park</span>
+			</div>
+
+			<div class="contact">
+				<div class="email">nanhien1907@gmail.com</div>
+			</div>
 		</div>
-		
-		<div class="contact">
-			<div class="email">nanhien1907@gmail.com</div>
+
+		<!-- Profile Photo Space: Replace the <span> with <img src="your-photo.jpg" alt="Nguyen An Nhien"> -->
+		<div class="profile-photo-placeholder">
+			<img src="face.jpg" alt="Nguyen An Nhien">
 		</div>
-		
 	</header>
-	
-	<div class="content" role=main>
-	
+
+	<div class="content" role="main">
+
 		<section id="objective">
 			<h2 class="title">Objective</h2>
 			<div class="description">
 				<p>
 					Currently a year 11 student taking 3 A-Level subjects: Mathematics, Computer Science, Physics; strong interest in Civil and Structural Engineering. Experienced with Arduino circuit prototypes, Python and structural simulations. Seeking to pursue a Civil engineering undergraduate degree to design reliable infrastructure.
-				</p>			
+				</p>
 			</div> <!-- end description -->
 		</section>
-		
-		
+
+
 		<section id="Education">
 			<h2 class="title">Education</h2>
 			<div class="description">
-				
+
 				<table>
 					<thead>
 						<td>Duration</td>
@@ -47,7 +105,7 @@
 						<td>Institute/School</td>
 						<td>Result</td>
 					</thead>
-					
+
 					<!-- edit this/ row-wise-->
 					<tr>
 						<td>2015-2018</td>
@@ -55,7 +113,7 @@
 						<td>Hoa Binh Primary School</td>
 						<td>Finished</td>
 					</tr>
-					
+
 					<tr> <!-- row2 -->
 						<td>2019-2026</td>
 						<td>Middle & High School</td>
@@ -63,89 +121,58 @@
 						<td>Graduated</td>
 					</tr>
 
-					<tr> <!-- row2 -->
+					<tr> <!-- row3 -->
 						<td>2026-present</td>
 						<td>High School</td>
 						<td>Vinschool Central Park</td>
 						<td>TBD</td>
 					</tr>
-					
+
 				</table>
-			
-			
+
 			</div> <!-- end description -->
 		</section>
-			
+
 		<section id="projects">
 			<h2 class="title">Projects Undertaken</h2>
 			<div class="description">
-				
+
 				<!-- Project 1 -->
 				<section class="project">
 					<h3 class="title">Wind Structure Simulation</h3>
 					<div class="meta">
 						<span class="field">Personal Project</span> <span class="date">Oct 2026 - Nov 2026</span>
 					</div>
-					<p class="description">Developed an interactive simulator using HTML and Python to visualize how wind speed can impact different structures at different heights. Features such as the ability to change the landscape, height of the building and animations to help make the tool more interactive.</p>
+					<div class="project-showcase">
+						<div class="project-text">
+							<p class="description">Developed an interactive simulator using HTML and Python to visualize how wind speed can impact different structures at different heights. Features such as the ability to change the landscape, height of the building and animations to help make the tool more interactive.</p>
+						</div>
+						<div class="project-media">
+							<img src="Screenshot 2026-11-23 at 20.47.47.jpg" alt="3D Wind Simulation Interface">
+						</div>
+					</div>
 				</section> <!-- end project description -->
-				
-				<!-- project 2 -->
+
+				<!-- Project 2 -->
 				<section class="project">
 					<h3 class="title">AIGC Bridge Monitoring System</h3>
 					<div class="meta">
 						<span class="field">Competition</span> <span class="date">Oct 2026 - Nov 2026</span>
 					</div>
-					<p class="description">Developed and created a model prototype system along with teammates to monitor a bridge and created an alarm system alongside it. Discussed how sensors could be implemented onto the bridge and how the data can be collected, analysed and how alarms can be turned on accordingly.</p>
+					<div class="project-showcase">
+						<div class="project-text">
+							<p class="description">Developed and created a model prototype system along with teammates to monitor a bridge and created an alarm system alongside it. Discussed how sensors could be implemented onto the bridge and how the data can be collected, analysed and how alarms can be turned on accordingly.</p>
+						</div>
+						<div class="project-media">
+							<img src="Screenshot 2026-11-23 at 20.47.25.jpg" alt="Bridge Structural Health Monitoring Poster">
+						</div>
+					</div>
 				</section> <!-- end project description -->
 
-				
-				
-				</div> <!-- end description -->
-		</section>	
-	
+			</div> <!-- end description -->
+		</section>
 
-		<!-- Training/ seminars -->
-		
-		
-		
-		<!-- Scholistics Achievements -->
-		
-		
-		
-		<!-- Technical Skills -->
-		
-		
-		<!-- Extra-Curricular Activities -->
-		
-		
-		<!-- Personal Informations -->
-		
-		
-		<!-- References -->
-		
-		
-		
-		<!-- Declarations -->
-
-	
-		<!-- signatory -->
-	
-	
-	
-	
 	</div> <!-- end main content -->
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	</div> <!-- end container -->
 	
